@@ -1,0 +1,73 @@
+
+/* 5. Post Feed
+/* ---------------------------------------------------------- */
+
+
+$post-image-size: 240px;
+
+.df-post-card{
+
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: stretch;
+    background: #000000;
+    margin-right: 70px;
+    margin-bottom: 70px;
+    height: $post-image-size;
+
+    @media (max-width:460px){
+        flex-direction: column;
+        height: initial;
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    &__image{
+        width: $post-image-size;
+        background-size: cover;
+        background-position: center;
+
+        @media (max-width:460px){
+            width: 100%;
+            min-height: $post-image-size;
+        }
+    }
+
+    &__content{
+        padding: 20px;
+        width: 300px;
+        box-sizing: border-box;
+
+        @media (max-width:460px){
+            width: 100%;
+        }
+    }
+
+    &__meta{
+        padding-bottom: 10px;
+    }
+
+    &__date{
+        font-family: spaceport;
+        color: white;
+        opacity: 0.4;
+    }
+
+    &__title{
+        font-family: spaceport;
+        color: white;
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+
+
+    &__excerpt{
+        font-size: 13px;
+        font-family: spaceport;
+        color: #5f5f5f;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+
+    {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
+    <title>{{meta_title}}</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="{{asset "built/darkfox.js"}}"></script>
+    {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
+    it should always be the last tag before the closing head tag --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+<div class="df-default">
+
+    <div class="df-default__sidebar-1">
+        <a class="df-default__logo" href="{{@site.url}}">
+            {{#if @site.logo}}
+                <img src="{{@site.logo}}" alt="{{@site.title}}">
+            {{/if}}
+        </a>
+
+        {{#if @custom.logo_secondary}}
+            <a class="df-default__logo2" href="{{@site.url}}">
+                <img src="{{@custom.logo_secondary}}" alt="{{@site.title}}">
+            </a>
+        {{/if}}
+        <div id="copyright" class="df-default__copyright"></div>
+
+        <div class="df-default__socials">
+            {{#if @custom.social_twitter}}
+                <a class="df-default__social df-default--twitter" href="{{@custom.social_twitter}}">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            {{/if}}
+            {{#if @custom.social_youtube}}
+                <a class="df-default__social df-default--youtube" href="{{@custom.social_youtube}}">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            {{/if}}
+            {{#if @custom.social_soundcloud}}
+                <a class="df-default__social df-default--soundcloud" href="{{@custom.social_soundcloud}}">
+                    <i class="fa-brands fa-soundcloud"></i>
+                </a>
+            {{/if}}
+            {{#if @custom.social_spotify}}
+                <a class="df-default__social df-default--spotify" href="{{@custom.social_spotify}}">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+            {{/if}}
+        </div>
+        <div class="df-default__navigation">
+            {{navigation type="primary"}}
+        </div>
+
+        <div class="df-default__search" data-ghost-search>Search</div>
+    </div>
+
+
+    <div class="df-default__content">
+        <div class="df-default__content-inner">
+            {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
+            {{{body}}}
+        </div>
+    </div>
+
+</div>
+{{!-- /.viewport --}}
+
+
+{{!-- Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries --}}
+
+{{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
+{{ghost_foot}}
+
+</body>
+</html>

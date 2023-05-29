@@ -1,0 +1,12 @@
+@use "vars";
+
+.df-feed{
+
+  @include vars.desktop-center(1400px);
+
+  &__posts{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}

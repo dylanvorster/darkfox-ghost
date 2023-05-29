@@ -1,0 +1,5 @@
+@use "vars";
+
+.df-page {
+  @include vars.desktop-center(900px);
+}

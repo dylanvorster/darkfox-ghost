@@ -1,0 +1,27 @@
+{{!-- This is a partial file used to generate a post "card"
+which templates loop over to generate a list of posts. --}}
+
+<a class="df-post-card" href="{{url}}">
+
+    <!--    IMAGE-->
+    {{#if feature_image}}
+        <div class="df-post-card__image" style="background-image: url('{{img_url feature_image size="m"}}')">
+
+        </div>
+    {{/if}}
+
+    <div class="df-post-card__content">
+
+        <div class="df-post-card__meta">
+            <div class="df-post-card__date">{{date}}</div>
+        </div>
+
+        <div class="df-post-card__title">
+            {{title}}
+        </div>
+
+        <div class="df-post-card__excerpt">{{excerpt}}</div>
+
+    </div>
+
+</a>
