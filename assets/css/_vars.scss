@@ -1,16 +1,15 @@
 $sidebar-size: 300px;
 
 @mixin desktop-center($size) {
+	margin-left: $sidebar-size;
+	max-width: $size;
 
-  margin-left: $sidebar-size;
-  max-width: $size;
+	@media (min-width: ($size + $sidebar-size + $sidebar-size)) {
+		margin: auto;
+	}
 
-  @media (min-width: ($size + $sidebar-size + $sidebar-size)) {
-    margin: auto;
-  }
-
-  @media (max-width:460px){
-    margin: 0;
-    max-width: 100%;
-  }
+	@media (max-width: 460px) {
+		margin: 0;
+		max-width: 100%;
+	}
 }

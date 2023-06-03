@@ -1,37 +1,88 @@
-.gh-canvas{
+.gh-canvas {
+	color: white;
 
-  color: white;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: spaceport;
+		padding-bottom: 30px;
 
-  h1, h2,  h3, h4, h5, h6{
-    font-family: spaceport;
-    padding-bottom: 30px;
+		@media (max-width: 460px) {
+			text-align: center;
+		}
+	}
 
-    @media (max-width:460px){
-      text-align: center;
-    }
-  }
+	ul,
+	ol {
+		padding-left: 20px;
+		padding-bottom: 40px;
 
-  h1{
-    font-size: 50px;
-  }
+		li {
+			font-family: "Source Sans Pro", sans-serif;
+			padding-bottom: 5px;
+		}
+	}
 
-  p{
-    font-family: sans-serif;
-    padding-bottom: 30px;
-    font-size: 15px;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    font-weight: 200;
-    color: #949494;
-  }
+	h1 {
+		font-size: 50px;
+	}
 
-  hr{
-    opacity: 0.4;
-    margin-bottom: 30px;
-  }
+	h2 {
+		color: var(--ghost-accent-color);
+		font-size: 30px;
+		padding-top: 40px;
+	}
 
-  a{
-    text-decoration: none;
-    color: var( --ghost-accent-color);
-  }
+	h3 {
+		opacity: 0.8;
+	}
+
+	p {
+		font-family: "Source Sans Pro", sans-serif;
+		padding-bottom: 30px;
+		font-size: 17px;
+		line-height: 26px;
+		letter-spacing: 0.5px;
+		font-weight: 200;
+		color: #949494;
+		letter-spacing: 0.5px;
+	}
+
+	.hljs {
+		background: rgb(17 19 26);
+	}
+
+	pre {
+		background: rgb(17 19 26);
+		margin-bottom: 30px;
+		border-radius: 10px;
+		overflow: hidden;
+		font-size: 14px;
+		padding: 20px;
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	hr {
+		opacity: 0.4;
+		margin-bottom: 30px;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--ghost-accent-color);
+	}
+
+	.kg-image-card {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 }
