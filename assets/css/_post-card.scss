@@ -4,14 +4,13 @@
 $post-image-size: 240px;
 
 .df-post-card {
-	margin-bottom: 70px;
 	display: flex;
 	flex-direction: row;
 	text-decoration: none;
 	align-items: stretch;
 	background: #000000;
-	margin-right: 70px;
-	margin-bottom: 70px;
+	margin-right: 60px;
+	margin-bottom: 60px;
 	height: $post-image-size;
 	border-left: solid 1px var(--ghost-accent-color);
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -37,7 +36,7 @@ $post-image-size: 240px;
 
 	&__content {
 		padding: 20px;
-		width: 380px;
+		width: 365px;
 		box-sizing: border-box;
 
 		@media (max-width: 460px) {
