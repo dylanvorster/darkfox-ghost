@@ -2,6 +2,7 @@
 /* ---------------------------------------------------------- */
 
 $post-image-size: 240px;
+$post-image-size2: 400px;
 
 .df-post-card {
 	display: flex;
@@ -15,6 +16,11 @@ $post-image-size: 240px;
 	border-left: solid 1px var(--ghost-accent-color);
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 
+	@media (max-width: 1700px) {
+		flex-grow: 1;
+		height: $post-image-size2;
+	}
+
 	@media (max-width: 460px) {
 		flex-direction: column;
 		height: initial;
@@ -27,10 +33,16 @@ $post-image-size: 240px;
 		width: $post-image-size;
 		background-size: cover;
 		background-position: center;
+		flex-shrink: 0;
+
+		@media (max-width: 1700px) {
+			height: $post-image-size2;
+			width: $post-image-size2;
+		}
 
 		@media (max-width: 460px) {
 			width: 100%;
-			min-height: $post-image-size;
+			height: $post-image-size;
 		}
 	}
 
@@ -39,7 +51,7 @@ $post-image-size: 240px;
 		width: 365px;
 		box-sizing: border-box;
 
-		@media (max-width: 460px) {
+		@media (max-width: 1700px) {
 			width: 100%;
 		}
 	}
