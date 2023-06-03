@@ -8,7 +8,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "assets/built"),
 		filename: "darkfox.js",
-		assetModuleFilename: "[file][ext][query]",
+		assetModuleFilename: "[hash][ext][query]",
 	},
 	module: {
 		rules: [
