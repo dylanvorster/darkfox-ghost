@@ -2,5 +2,5 @@
 
 DarkFox theme for MechaFox
 
-![](./assets/desktop.png)
-![](./assets/mobile.png)
+![](./assets/desktop.jpg)
+![](./assets/mobile.jpg)
